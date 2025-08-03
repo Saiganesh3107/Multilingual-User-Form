@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER DETAILS FORM</title>
+    <link rel="stylesheet" href="./engform.css">
+</head>
+<body>
+    <nav class="navbar navbar-exapnd-lg">
+        <h1>USER DETAILS FORM</h1>
+        <div class="language-container">
+            <label for="l1">Language</label>
+            <br>
+            <select name="l1" id="l1" onchange="redirectLanguage()">
+                <option value="English" selected>English</option>
+                <option value="Telugu">Telugu</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Tamil">Tamil</option>
+                <option value="Kannada">Kannada</option>
+                <option value="Malayalam">Malayalam</option>
+            </select>
+        </div>
+    </nav>
+    <form class="f1" id="userForm" method="POST" action="/submit">
+        <div>
+        <label for="firstname">Firstname:</label>
+        <input type="text" name="firstname" id="firstname" placeholder="Enter your Firstname" required>
+    </div>
+    <div>
+        <label for="lastname">Lastname:</label>
+        <input type="text" name="lastname" id="lastname" placeholder="Enter your Lastname" required>
+    </div>
+    <div>
+        <label for="phone">Mobile Number:</label>
+        <input type="number" name="phone" id="phone" required>
+    </div>
+    <div>
+        <label for="city">City:</label>
+        <input type="text" name="city" id="city" placeholder="Enter your City" required>
+    </div>
+    <div>
+        <label for="pincode">Pincode:</label>
+        <input type="number" name="pincode" id="pincode" required>
+    </div>
+        <div>
+            <label for="state">State/Union Territory:</label>
+            <br>
+            <select name="state" id="s1">
+                <option value="null"></option>
+                <option value="ap">Andhra Pradesh</option>
+    <option value="ar">Arunachal Pradesh</option>
+    <option value="as">Assam</option>
+    <option value="br">Bihar</option>
+    <option value="ct">Chhattisgarh</option>
+    <option value="ga">Goa</option>
+    <option value="gj">Gujarat</option>
+    <option value="hr">Haryana</option>
+    <option value="hp">Himachal Pradesh</option>
+    <option value="jh">Jharkhand</option>
+    <option value="ka">Karnataka</option>
+    <option value="kl">Kerala</option>
+    <option value="mp">Madhya Pradesh</option>
+    <option value="mh">Maharashtra</option>
+    <option value="mn">Manipur</option>
+    <option value="ml">Meghalaya</option>
+    <option value="mz">Mizoram</option>
+    <option value="nl">Nagaland</option>
+    <option value="od">Odisha</option>
+    <option value="pb">Punjab</option>
+    <option value="rj">Rajasthan</option>
+    <option value="sk">Sikkim</option>
+    <option value="tn">Tamil Nadu</option>
+    <option value="ts">Telangana</option>
+    <option value="tr">Tripura</option>
+    <option value="up">Uttar Pradesh</option>
+    <option value="uk">Uttarakhand</option>
+    <option value="wb">West Bengal</option>
+
+    <option value="an">Andaman and Nicobar Islands</option>
+    <option value="ch">Chandigarh</option>
+    <option value="dn">Dadra and Nagar Haveli and Daman and Diu</option>
+    <option value="dl">Delhi</option>
+    <option value="jk">Jammu and Kashmir</option>
+    <option value="la">Ladakh</option>
+    <option value="ld">Lakshadweep</option>
+    <option value="py">Puducherry</option>
+            </select>
+        </div>
+        <div>
+            <label >Country:</label>
+            <br>
+            <input type="radio" name="country" value="India" checked> India
+        </div>
+        <button type="submit">submit</button>
+    </form>
+</body>
+<script src="./form.js"></script>
+</html>

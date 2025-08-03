@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>பயனர் விவரங்கள் படிவம்</title>
+    <link rel="stylesheet" href="engform.css">
+</head>
+<body>
+    <nav class="navbar navbar-exapnd-lg">
+        <h1>பயனர் விவரங்கள் படிவம்</h1>
+        <div class="language-container">
+            <label for="l1">மொழி</label>
+            <br>
+            <select name="l1" id="l1" onchange="redirectLanguage()">
+                <option value="English">ஆங்கிலம்</option>
+                <option value="Telugu">தெலுங்கு</option>
+                <option value="Hindi">இந்தி</option>
+                <option value="Tamil" selected>தமிழ்</option>
+                <option value="Kannada">கன்னடம்</option>
+                <option value="Malayalam">மலையாளம்</option>
+            </select>
+        </div>
+    </nav>
+    <form class="f1" id="userForm" method="POST" action="/submit">
+        <div>
+            <label for="firstname">முதல் பெயர்:</label>
+            <br>
+            <input type="text" name="firstname" id="firstname" placeholder="உங்கள் முதல் பெயரை உள்ளிடவும்" required>
+        </div>
+        <div>
+            <label for="lastname">கடைசி பெயர்:</label>
+            <br>
+            <input type="text" name="lastname" id="lastname" placeholder="உங்கள் கடைசி பெயரை உள்ளிடவும்" required>
+        </div>
+        <div>
+            <label for="phone">மொபைல் எண்:</label>
+            <br>
+            <input type="number" name="phone" id="phone" required>
+        </div>
+        <div>
+            <label for="city">நகரம்:</label>
+            <br>
+            <input type="text" name="city" id="city" placeholder="உங்கள் நகரத்தை உள்ளிடவும்" required>
+        </div>
+        <div>
+            <label for="pincode">அஞ்சல் குறியீடு:</label>
+            <br>
+            <input type="number" name="pincode" id="pincode" required>
+        </div>
+        <div>
+            <label for="state">மாநிலம்/குடியரசு பகுதி:</label>
+            <br>
+            <select name="state" id="s1">
+                <option value="null"></option>
+                <option value="ap">ஆந்திரப் பிரதேசம்</option>
+                <option value="ar">அருணாச்சலப் பிரதேசம்</option>
+                <option value="as">அசாம்</option>
+                <option value="br">பீகார்</option>
+                <option value="ct">சத்தீஸ்கர்</option>
+                <option value="ga">கோவா</option>
+                <option value="gj">குஜராத்</option>
+                <option value="hr">ஹரியானா</option>
+                <option value="hp">ஹிமாச்சலப் பிரதேசம்</option>
+                <option value="jh">ஜார்கண்ட்</option>
+                <option value="ka">கர்நாடகம்</option>
+                <option value="kl">கேரளா</option>
+                <option value="mp">மத்தியப் பிரதேசம்</option>
+                <option value="mh">மகாராஷ்டிரா</option>
+                <option value="mn">மணிப்பூர்</option>
+                <option value="ml">மேகாலயா</option>
+                <option value="mz">மிசோரம்</option>
+                <option value="nl">நாகாலாந்து</option>
+                <option value="od">ஒடிசா</option>
+                <option value="pb">பஞ்சாப்</option>
+                <option value="rj">ராஜஸ்தான்</option>
+                <option value="sk">சிக்கிம்</option>
+                <option value="tn">தமிழ்நாடு</option>
+                <option value="ts">தெலுங்கானா</option>
+                <option value="tr">திரிபுரா</option>
+                <option value="up">உத்தரப்பிரதேசம்</option>
+                <option value="uk">உத்தராகண்ட்</option>
+                <option value="wb">மேற்கு வங்காளம்</option>
+                <option value="an">அந்தமான் மற்றும் நிக்கோபார் தீவுகள்</option>
+                <option value="ch">சண்டிகர்</option>
+                <option value="dn">தாத்ரா நகர் ஹவேலி மற்றும் தமன் & தீவு</option>
+                <option value="dl">டெல்லி</option>
+                <option value="jk">ஜம்மு & காஷ்மீர்</option>
+                <option value="la">லடாக்</option>
+                <option value="ld">லக்ஷதீவுகள்</option>
+                <option value="py">புதுச்சேரி</option>
+            </select>
+        </div>
+        <div>
+            <label for="country" >நாடு:</label>
+            <br>
+            <input type="radio" name="country" value="India" checked> இந்தியா
+        </div>
+        <button type="submit">சமர்ப்பிக்கவும்</button>
+    </form>
+</body>
+<script src="./form.js"></script>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>उपयोगकर्ता विवरण फ़ॉर्म</title>
+    <link rel="stylesheet" href="engform.css">
+</head>
+<body>
+    <nav class="navbar navbar-exapnd-lg">
+        <h1>उपयोगकर्ता विवरण फ़ॉर्म</h1>
+        <div class="language-container">
+            <label for="l1">भाषा</label>
+            <br>
+            <select name="l1" id="l1" onchange="redirectLanguage()">
+                <option value="English">अंग्रेज़ी</option>
+                <option value="Telugu">तेलुगु</option>
+                <option value="Hindi" selected>हिंदी</option>
+                <option value="Tamil">तमिल</option>
+                <option value="Kannada">कन्नड़</option>
+                <option value="Malayalam">मलयालम</option>
+            </select>
+        </div>
+    </nav>
+    <form class="f1" id="userForm" method="POST" action="/submit">
+        <div>
+            <label for="firstname">पहला नाम:</label>
+            <br>
+            <input type="text" name="firstname" id="firstname" placeholder="अपना पहला नाम दर्ज करें" required>
+        </div>
+        <div>
+            <label for="lastname">अंतिम नाम:</label>
+            <br>
+            <input type="text" name="lastname" id="lastname" placeholder="अपना अंतिम नाम दर्ज करें">
+        </div>
+        <div>
+            <label for="phone">मोबाइल नंबर:</label>
+            <br>
+            <input type="number" name="phone" id="phone" required>
+        </div>
+        <div>
+            <label for="city">शहर:</label>
+            <br>
+            <input type="text" name="city" id="city" placeholder="अपना शहर दर्ज करें" required>
+        </div>
+        <div>
+            <label for="pincode">पिनकोड:</label>
+            <br>
+            <input type="number" name="pincode" id="pincode" required>
+        </div>
+        <div>
+            <label for="state">राज्य / केंद्रशासित प्रदेश:</label>
+            <br>
+            <select name="state" id="s1">
+                <option value="null"></option>
+                <option value="ap">आंध्र प्रदेश</option>
+                <option value="ar">अरुणाचल प्रदेश</option>
+                <option value="as">असम</option>
+                <option value="br">बिहार</option>
+                <option value="ct">छत्तीसगढ़</option>
+                <option value="ga">गोवा</option>
+                <option value="gj">गुजरात</option>
+                <option value="hr">हरियाणा</option>
+                <option value="hp">हिमाचल प्रदेश</option>
+                <option value="jh">झारखंड</option>
+                <option value="ka">कर्नाटक</option>
+                <option value="kl">केरल</option>
+                <option value="mp">मध्य प्रदेश</option>
+                <option value="mh">महाराष्ट्र</option>
+                <option value="mn">मणिपुर</option>
+                <option value="ml">मेघालय</option>
+                <option value="mz">मिज़ोरम</option>
+                <option value="nl">नगालैंड</option>
+                <option value="od">ओडिशा</option>
+                <option value="pb">पंजाब</option>
+                <option value="rj">राजस्थान</option>
+                <option value="sk">सिक्किम</option>
+                <option value="tn">तमिलनाडु</option>
+                <option value="ts">तेलंगाना</option>
+                <option value="tr">त्रिपुरा</option>
+                <option value="up">उत्तर प्रदेश</option>
+                <option value="uk">उत्तराखंड</option>
+                <option value="wb">पश्चिम बंगाल</option>
+                <option value="an">अंडमान और निकोबार द्वीप</option>
+                <option value="ch">चंडीगढ़</option>
+                <option value="dn">दादरा और नगर हवेली एवं दमन और दीव</option>
+                <option value="dl">दिल्ली</option>
+                <option value="jk">जम्मू और कश्मीर</option>
+                <option value="la">लद्दाख</option>
+                <option value="ld">लक्षद्वीप</option>
+                <option value="py">पुदुचेरी</option>
+            </select>
+        </div>
+        <div>
+            <label for="country">देश:</label>
+            <br>
+            <input type="radio" name="country" value="India" checked> भारत
+        </div>
+        <button type="submit">जमा करें</button>
+    </form>
+</body>
+<script src="./form.js"></script>
+</html>

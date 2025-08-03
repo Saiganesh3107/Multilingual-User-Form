@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ಬಳಕೆದಾರ ವಿವರ ಫಾರ್ಮ್</title>
+    <link rel="stylesheet" href="engform.css">
+</head>
+<body>
+    <nav class="navbar navbar-exapnd-lg">
+        <h1>ಬಳಕೆದಾರ ವಿವರ ಫಾರ್ಮ್</h1>
+        <div class="language-container">
+            <label for="l1">ಭಾಷೆ</label>
+            <br>
+            <select name="l1" id="l1" onchange="redirectLanguage()">
+                <option value="English">ಇಂಗ್ಲಿಷ್</option>
+                <option value="Telugu">ತೆಲುಗು</option>
+                <option value="Hindi">ಹಿಂದಿ</option>
+                <option value="Tamil">ತಮಿಳು</option>
+                <option value="Kannada" selected>ಕನ್ನಡ</option>
+                <option value="Malayalam">ಮಲಯಾಳಂ</option>
+            </select>
+        </div>
+    </nav>
+    <form class="f1" id="userForm" method="POST" action="/submit">
+        <div>
+            <label for="firstname">ಮೊದಲ ಹೆಸರು:</label>
+            <br>
+            <input type="text" name="firstname" id="firstname" placeholder="ನಿಮ್ಮ ಮೊದಲ ಹೆಸರನ್ನು ನಮೂದಿಸಿ" required>
+        </div>
+        <div>
+            <label for="lastname">ಕೊನೆಯ ಹೆಸರು:</label>
+            <br>
+            <input type="text" name="lastname" id="lastname" placeholder="ನಿಮ್ಮ ಕೊನೆಯ ಹೆಸರನ್ನು ನಮೂದಿಸಿ">
+        </div>
+        <div>
+            <label for="phone">ಮೊಬೈಲ್ ನಂಬರ್:</label>
+            <br>
+            <input type="number" name="phone" id="phone" required>
+        </div>
+        <div>
+            <label for="city">ನಗರ:</label>
+            <br>
+            <input type="text" name="city" id="city" placeholder="ನಿಮ್ಮ ನಗರದ ಹೆಸರನ್ನು ನಮೂದಿಸಿ" required>
+        </div>
+        <div>
+            <label for="pincode">ಪಿನ್ ಕೋಡ್:</label>
+            <br>
+            <input type="number" name="pincode" id="pincode" required>
+        </div>
+        <div>
+            <label for="state">ರಾಜ್ಯ/ಕೇಂದ್ರಾಡಳಿತ ಪ್ರದೇಶ:</label>
+            <br>
+            <select name="state" id="s1">
+                <option value="null"></option>
+                <option value="ap">ಆಂಧ್ರ ಪ್ರದೇಶ</option>
+                <option value="ar">ಅರುಣಾಚಲ ಪ್ರದೇಶ</option>
+                <option value="as">ಅಸ್ಸಾಂ</option>
+                <option value="br">ಬಿಹಾರ್</option>
+                <option value="ct">ಛತ್ತೀಸ್‌ಗಢ</option>
+                <option value="ga">ಗೋವಾ</option>
+                <option value="gj">ಗುಜರಾತ್</option>
+                <option value="hr">ಹರಿಯಾಣಾ</option>
+                <option value="hp">ಹಿಮಾಚಲ ಪ್ರದೇಶ</option>
+                <option value="jh">ಝಾರ್ಖಂಡ್</option>
+                <option value="ka">ಕರ್ನಾಟಕ</option>
+                <option value="kl">ಕೇರಳ</option>
+                <option value="mp">ಮಧ್ಯ ಪ್ರದೇಶ</option>
+                <option value="mh">ಮಹಾರಾಷ್ಟ್ರ</option>
+                <option value="mn">ಮನಿಪುರ</option>
+                <option value="ml">ಮೆಘಾಲಯ</option>
+                <option value="mz">ಮಿಜೋರಾಂ</option>
+                <option value="nl">ನಾಗಾಲ್ಯಾಂಡ್</option>
+                <option value="od">ಒಡಿಶಾ</option>
+                <option value="pb">ಪಂಜಾಬ್</option>
+                <option value="rj">ರಾಜಸ್ಥಾನ್</option>
+                <option value="sk">ಸಿಕ್ಕಿಂ</option>
+                <option value="tn">ತಮಿಳುನಾಡು</option>
+                <option value="ts">తెలంగాణ</option>
+                <option value="tr">ತ್ರಿಪುರಾ</option>
+                <option value="up">ಉತ್ತರ ಪ್ರದೇಶ</option>
+                <option value="uk">ಉತ್ತರಾಖಂಡ</option>
+                <option value="wb">ಪಶ್ಚಿಮ ಬಂಗಾಳ</option>
+                <option value="an">ಅಂಡಮಾನ್ ಮತ್ತು ನಿಕೋಬಾರ್ ದ್ವೀಪಗಳು</option>
+                <option value="ch">ಚಂಡೀಗಢ</option>
+                <option value="dn">ದಾದ್ರಾ ಮತ್ತು ನಾಗರ್ ಹವೇಳಿ ಮತ್ತು ದಮನ್ ಮತ್ತು ದಿಯು</option>
+                <option value="dl">ದೆಹಲಿ</option>
+                <option value="jk">ಜಮ್ಮು ಮತ್ತು ಕಾಶ್ಮೀರ್</option>
+                <option value="la">ಲಡಾಖ್</option>
+                <option value="ld">ಲಕ್ಷದ್ವೀಪ</option>
+                <option value="py">ಪಾಂಡಿಚೇರಿ</option>
+            </select>
+        </div>
+        <div>
+            <label for="country">ದೇಶ:</label>
+            <br>
+            <input type="radio" name="country" value="India" checked> ಭಾರತ
+        </div>
+        <button type="submit">ಸಲ್ಲಿಸಿ</button>
+    </form>
+</body>
+<script src="./form.js"></script>
+</html>

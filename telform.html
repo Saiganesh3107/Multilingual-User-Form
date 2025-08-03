@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>వినియోగదారుడి వివరాల ఫారమ్</title>
+  <link rel="stylesheet" href="./engform.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <h1>వినియోగదారుడి వివరాల ఫారమ్</h1>
+    <div class="language-container">
+      <label for="l1">భాష</label>
+      <br>
+      <select name="l1" id="l1" onchange="redirectLanguage()">
+        <option value="English">ఇంగ్లీష్</option>
+        <option value="Telugu" selected>తెలుగు</option>
+        <option value="Hindi">హిందీ</option>
+        <option value="Tamil">తమిళం</option>
+        <option value="Kannada">కన్నడ</option>
+        <option value="Malayalam">మలయాళం</option>
+      </select>
+    </div>
+  </nav>
+
+  <form class="f1" id="userForm" method="POST" action="/submit">
+    <div>
+    <label for="firstname">మొదటి పేరు:</label>
+    <br>
+    <input type="text" name="firstname" id="firstname" placeholder="మీ మొదటి పేరును నమోదు చేయండి" required>
+</div>
+<div>
+    <label for="lastname">చివరి పేరు:</label>
+    <br>
+    <input type="text" name="lastname" id="lastname" placeholder="మీ చివరి పేరును నమోదు చేయండి" required>
+</div>
+
+    <div>
+      <label for="phone">మొబైల్ నంబర్:</label>
+      <input type="number" name="phone" id="phone" required>
+    </div>
+    <div>
+      <label for="city">నగరం:</label>
+      <input type="text" name="city" id="city" placeholder="మీ నగరాన్ని నమోదు చేయండి" required>
+    </div>
+    <div>
+      <label for="pincode">పిన్‌కోడ్:</label>
+      <input type="number" name="pincode" id="pincode" required>
+    </div>
+    <div>
+      <label for="state">రాష్ట్రం / కేంద్రపాలిత ప్రాంతం:</label>
+      <br>
+      <select name="state" id="s1">
+        <option value="null"></option>
+        <option value="ap">ఆంధ్రప్రదేశ్</option>
+        <option value="ar">అరుణాచల ప్రదేశ్</option>
+        <option value="as">అస్సాం</option>
+        <option value="br">బీహార్</option>
+        <option value="ct">ఛత్తీస్‌గఢ్</option>
+        <option value="ga">గోవా</option>
+        <option value="gj">గుజరాత్</option>
+        <option value="hr">హర్యానా</option>
+        <option value="hp">హిమాచల్ ప్రదేశ్</option>
+        <option value="jh">ఝార్ఖండ్</option>
+        <option value="ka">కర్ణాటక</option>
+        <option value="kl">కేరళ</option>
+        <option value="mp">మధ్యప్రదేశ్</option>
+        <option value="mh">మహారాష్ట్ర</option>
+        <option value="mn">మణిపూర్</option>
+        <option value="ml">మెఘాలయ</option>
+        <option value="mz">మిజోరం</option>
+        <option value="nl">నాగాలాండ్</option>
+        <option value="od">ఒడిశా</option>
+        <option value="pb">పంజాబ్</option>
+        <option value="rj">రాజస్థాన్</option>
+        <option value="sk">సిక్కిం</option>
+        <option value="tn">తమిళనాడు</option>
+        <option value="ts">తెలంగాణ</option>
+        <option value="tr">త్రిపుర</option>
+        <option value="up">ఉత్తర ప్రదేశ్</option>
+        <option value="uk">ఉత్తరాఖండ్</option>
+        <option value="wb">పశ్చిమ బెంగాల్</option>
+        <option value="an">అండమాన్ మరియు నికోబార్ దీవులు</option>
+        <option value="ch">చండీగఢ్</option>
+        <option value="dn">దాద్రా మరియు నాగర్ హవేలీ మరియు దామన్ మరియు డియు</option>
+        <option value="dl">ఢిల్లీ</option>
+        <option value="jk">జమ్మూ మరియు కాశ్మీర్</option>
+        <option value="la">లడఖ్</option>
+        <option value="ld">లక్షద్వీప్</option>
+        <option value="py">పుదుచ్చేరి</option>
+      </select>
+    </div>
+    <div>
+      <label for="country">దేశం:</label>
+      <br>
+      <input type="radio" name="country" value="India" checked> భారతదేశం
+    </div>
+    <button type="submit">సబ్మిట్ చేయండి</button>
+  </form>
+</body>
+<script src="./form.js"></script>
+</html>
