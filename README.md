@@ -1,58 +1,112 @@
-# Multilingual-User-Form
-A multilingual user details form built with HTML, CSS, JS, Node.js, and MySQL. Supports 6 Indian languages (English, Telugu, Hindi, Tamil, Kannada, Malayalam). Submits data via POST to a Node server and stores it in a MySQL database.
+# 🌐 Multilingual User Details Form with Node.js & MySQL
 
-Multilingual User Details Form is a web application that allows users to submit their personal details in six Indian languages:
-🇬🇧 English, 🇮🇳 Telugu, 🇮🇳 Hindi, 🇮🇳 Tamil, 🇮🇳 Kannada, and 🇮🇳 Malayalam.
+This project is a **multilingual web form** built using **HTML, CSS, JavaScript, Node.js, and MySQL**. It allows users to fill in their details in 6 different Indian languages and stores the data in a MySQL database.
 
-This project is built with HTML, CSS, and JavaScript on the frontend, and uses Node.js with Express for the backend. The submitted form data is stored in a MySQL database.
+## 📌 Features
 
-✅ Key Highlights:
-🔁 Seamless language switching
+- Supports **English**, **Telugu**, **Hindi**, **Tamil**, **Kannada**, **Malayalam**
+- Real-time language switching
+- Input validation for required fields
+- POST data submission to backend
+- Stores user data in MySQL database
+- Works with local Node.js server (`http://localhost:3000`)
 
-🧾 Form validations using HTML5
+---
 
-🔗 Backend form submission using POST
+## 🗂️ Project Structure
 
-💾 Data saved securely in MySQL
+```
+multilingual-user-form/
+├── engform.html         # English Form
+├── telform.html         # Telugu Form
+├── hindiform.html       # Hindi Form
+├── tamform.html         # Tamil Form
+├── kanform.html         # Kannada Form
+├── malform.html         # Malayalam Form
+├── engform.css          # Common CSS styling
+├── form.js              # Language redirect logic
+├── server.js            # Node.js backend server
+├── db.js                # MySQL DB connection file
+└── README.md
+```
 
-🌍 Easy to expand with more languages
+---
 
-🖥️ Live server at http://localhost:3000
+## ⚙️ Setup Instructions
 
+### 1️⃣ Clone the Repository
 
- ️Project Structure:
- multilingual-user-form/
- ├── engform.html         # English Form
- ├── telform.html         # Telugu Form
- ├── hindiform.html       # Hindi Form
- ├── tamform.html         # Tamil Form
- ├── kanform.html         # Kannada Form
- ├── malform.html         # Malayalam Form
- ├── engform.css          # Common CSS styling
- ├── form.js              # Language redirect logic
- ├── server.js            # Node.js backend server
- ├── db.js                # MySQL DB connection file
- └── README.md
+```bash
+git clone https://github.com/Saiganesh3107/Multilingual-User-Form.git
+cd multilingual-user-form
+```
 
+### 2️⃣ Install Dependencies
 
- Install Node.js Dependencies:
- npm install express mysql2 body-parser
+```bash
+npm install express mysql2 body-parser
+```
 
- Set Up MySQL Database:
- Open MySQL Workbench or terminal and run:
- 
- CREATE DATABASE user_form;
- USE user_form;
- CREATE TABLE users (
- id INT AUTO_INCREMENT PRIMARY KEY,
- firstname VARCHAR(100),
- lastname VARCHAR(100),
- phone VARCHAR(20),
- city VARCHAR(100),
- pincode VARCHAR(10),
- state VARCHAR(100),
- country VARCHAR(100)
- );
+### 3️⃣ Create MySQL Database & Table
 
- Run the Server:
- node server.js
+```sql
+CREATE DATABASE user_form;
+USE user_form;
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  firstname VARCHAR(100),
+  lastname VARCHAR(100),
+  phone VARCHAR(20),
+  city VARCHAR(100),
+  pincode VARCHAR(10),
+  state VARCHAR(100),
+  country VARCHAR(100)
+);
+```
+
+### 4️⃣ Configure DB Credentials in `db.js`
+
+```js
+const mysql = require('mysql2');
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'your_password',
+  database: 'user_form'
+});
+connection.connect(err => {
+  if (err) console.error('MySQL connection failed:', err);
+  else console.log('Connected to MySQL database');
+});
+module.exports = connection;
+```
+
+---
+
+## ▶️ Run the Server
+
+```bash
+node server.js
+```
+
+You should see:
+
+```
+Server running at http://localhost:3000
+Connected to MySQL database
+```
+
+---
+
+## 🌍 Open the Form
+
+Open `engform.html` or other language forms in your browser.
+
+🔗 Server endpoint: [http://localhost:3000/submit](http://localhost:3000/submit)
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
